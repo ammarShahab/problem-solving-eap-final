@@ -95,7 +95,7 @@ function isSameElement(arr1, arr2) {
     if (sortArr1.length !== sortArr2.length) {
       return false;
     }
-    // console.log(value, sortArr2[index]);
+    console.log(value, sortArr2[index]);
 
     return value === sortArr2[index];
   });
@@ -137,3 +137,28 @@ function moveZeoToEnd(arr) {
 }
 
 moveZeoToEnd([8, 0, 8, 0, 0, 9, 0, 4]);
+
+/* 
+Find the intersection of two arrays
+Write a function that returns the common elements between two arrays.
+Example Inputs and Outputs
+Array 1	              Array 2	                  Output
+[1, 2, 3, 4]	      [3, 4, 5, 6]	             [3, 4]
+[1, 2, 2, 3]	      [2, 2, 4]	                  [2, 2]
+[5, 6, 7]	          [1, 2, 3]	                      []
+["a", "b", "c"]	    ["b", "c", "d"]	        ["b", "c"]
+*/
+
+function findCommon(arr1, arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return "Input is not an array";
+  }
+  const findCommonVal = arr1.filter((value) => {
+    // console.log(value, arr2[index]);
+    return arr2.includes(value);
+  });
+
+  return findCommonVal;
+}
+
+console.log(findCommon(["a", "b", "c"], ["b", "c", "d"]));
