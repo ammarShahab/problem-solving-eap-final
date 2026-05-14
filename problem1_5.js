@@ -29,6 +29,8 @@ function CountVowels(sentence) {
 
   for (const element of arr) {
     if (vowels.includes(element)) {
+      // console.log(element);
+
       count++;
     }
   }
@@ -162,3 +164,16 @@ function findCommon(arr1, arr2) {
 }
 
 console.log(findCommon(["a", "b", "c"], ["b", "c", "d"]));
+
+/* 
+Find all pairs with a given sum in an array
+Given an array and a target sum, return all pairs of numbers whose sum equals the target.
+
+Example Inputs and Outputs
+Array	                    Target_Sum	                Output
+[1, 2, 3, 4, 5]	          5	                        [[1,4], [2,3]]
+[2, 7, 11, 15]	          9	                        [[2,7]]
+[1, 5, 7, -1, 5]	        6	                        
+
+[[1,5], [7,-1], [1,5]]
+*/
